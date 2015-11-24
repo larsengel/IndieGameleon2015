@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_Title</name>
+    <events>
+        <event-block sid="7935106832489105">
+            <conditions>
+                <condition id="3" name="On touched object" sid="123465192705856" type="Touch">
+                    <param id="0" name="Object">Button_Start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5089893305385957" type="System">
+                    <param id="0" name="Layout">Layout_TeamLogo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9135682099583077">
+            <conditions />
+            <actions />
+            <sub-events>
+                <event-block sid="9998424517750133">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="8124439405350996" type="Mouse">
+                            <param id="0" name="Object">Hover</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="5253845528909594" type="Hover" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="379455148484137" type="Mouse">
+                            <param id="0" name="Cursor style">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6212479245327461">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5672058761093718" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="5838900560946941" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

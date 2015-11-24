@@ -1,0 +1,1745 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>GameleonJam2015</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>13gao6falxa5g</unique-id>
+    <saved-with-version>21202</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout_Title</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Intro">
+            <object-type name="intro1_spectator" sid="9576943008970581">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="1428197559285616">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8530782775974689" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_bg_szene" sid="7534025953098661">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840887691832933" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_bg_szene1.png">
+                            <collision-poly>
+                                <point x="0.000510204" y="0.00085034" />
+                                <point x="0.99949" y="0.00085034" />
+                                <point x="1" y="1" />
+                                <point x="0.000510204" y="0.99915" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_mainchar_browsing" sid="2050640836808356">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7443310457269878" speed="5">
+                        <frame duration="1" hotspotX="0.500898" hotspotY="0.5" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_mainchar_browsing0001.png">
+                            <collision-poly>
+                                <point x="0.186715" y="0.0716253" />
+                                <point x="0.499102" y="0.0130854" />
+                                <point x="0.908438" y="0.035124" />
+                                <point x="0.903052" y="0.5" />
+                                <point x="0.793537" y="0.920799" />
+                                <point x="0.499102" y="0.988981" />
+                                <point x="0.606822" y="0.767218" />
+                                <point x="0.166966" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.500898" hotspotY="0.5" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_mainchar_browsing0002.png">
+                            <collision-poly>
+                                <point x="0.186715" y="0.0716253" />
+                                <point x="0.499102" y="0.0130854" />
+                                <point x="0.908438" y="0.035124" />
+                                <point x="0.903052" y="0.5" />
+                                <point x="0.793537" y="0.920799" />
+                                <point x="0.499102" y="0.988981" />
+                                <point x="0.606822" y="0.767218" />
+                                <point x="0.021544" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.500898" hotspotY="0.5" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_mainchar_browsing0003.png">
+                            <collision-poly>
+                                <point x="0.186715" y="0.0716253" />
+                                <point x="0.499102" y="0.0130854" />
+                                <point x="0.908438" y="0.035124" />
+                                <point x="0.903052" y="0.5" />
+                                <point x="0.793537" y="0.920799" />
+                                <point x="0.499102" y="0.988981" />
+                                <point x="0.606822" y="0.767218" />
+                                <point x="0.224417" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.500898" hotspotY="0.5" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_mainchar_browsing0004.png">
+                            <collision-poly>
+                                <point x="0.186715" y="0.0716253" />
+                                <point x="0.499102" y="0.0130854" />
+                                <point x="0.908438" y="0.035124" />
+                                <point x="0.903052" y="0.5" />
+                                <point x="0.793537" y="0.920799" />
+                                <point x="0.499102" y="0.988981" />
+                                <point x="0.606822" y="0.767218" />
+                                <point x="0.224417" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_mainchar_frightened" sid="4744280063870002">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3513462796700279" speed="5">
+                        <frame duration="1" hotspotX="0.121464" hotspotY="0.750614" original-source="E:\Dropbox\IndieGameleon\Assets\Intro\szene3\intro_mainchar_frightened0001.png">
+                            <collision-poly>
+                                <point x="0.173045" y="0.0638821" />
+                                <point x="0.499168" y="0.0239558" />
+                                <point x="0.891847" y="0.0399263" />
+                                <point x="0.737105" y="0.5" />
+                                <point x="0.728785" y="0.899877" />
+                                <point x="0.499168" y="0.998157" />
+                                <point x="0.492512" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.121464" hotspotY="0.750614" original-source="E:\Dropbox\IndieGameleon\Assets\Intro\szene3\intro_mainchar_frightened0002.png">
+                            <collision-poly>
+                                <point x="0.173045" y="0.0638821" />
+                                <point x="0.499168" y="0.0239558" />
+                                <point x="0.891847" y="0.0399263" />
+                                <point x="0.737105" y="0.5" />
+                                <point x="0.728785" y="0.899877" />
+                                <point x="0.499168" y="0.998157" />
+                                <point x="0.492512" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_messagebubble" sid="3833153412361692">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8705835464413036" speed="5">
+                        <frame duration="1" hotspotX="0.500501" hotspotY="0.501139" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\screen\intro_messagebubble.png">
+                            <collision-poly>
+                                <point x="0.0620621" y="0.14123" />
+                                <point x="0.499499" y="0.0888383" />
+                                <point x="0.998999" y="0.0022779" />
+                                <point x="0.978979" y="0.952164" />
+                                <point x="0.499499" y="0.90205" />
+                                <point x="0.0530531" y="0.879271" />
+                                <point x="0.038038" y="0.498861" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_pc" sid="7330140097403757">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8949287852952604" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500589" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_pc0001.png">
+                            <collision-poly>
+                                <point x="0.248307" y="0.259128" />
+                                <point x="0.5" y="0.00353357" />
+                                <point x="0.777652" y="0.232038" />
+                                <point x="0.852144" y="0.845701" />
+                                <point x="0.0756208" y="0.921084" />
+                                <point x="0.0553047" y="0.499411" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500589" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_pc0002.png">
+                            <collision-poly>
+                                <point x="0.248307" y="0.259128" />
+                                <point x="0.5" y="0.00353357" />
+                                <point x="0.777652" y="0.232038" />
+                                <point x="0.852144" y="0.845701" />
+                                <point x="0.0756208" y="0.921084" />
+                                <point x="0.0553047" y="0.499411" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500589" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\intro_pc0003.png">
+                            <collision-poly>
+                                <point x="0.248307" y="0.259128" />
+                                <point x="0.5" y="0.00353357" />
+                                <point x="0.777652" y="0.232038" />
+                                <point x="0.852144" y="0.845701" />
+                                <point x="0.0756208" y="0.921084" />
+                                <point x="0.0553047" y="0.499411" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_pcscreen" sid="6252960187150649">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5094571916209615" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\screen\intro_pcscreen.png">
+                            <collision-poly>
+                                <point x="0.000518672" y="0.00091659" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.00311203" y="0.9945" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Dropbox\IndieGameleon\Assets\Intro\screen\intro_pcscreen_event.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="intro_szene3_background" sid="2534949723241452">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9732212015951388" speed="5">
+                        <frame duration="1" hotspotX="0.50024" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Intro\szene3\intro_szene3_background.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="world_news" sid="5204261275842084">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5270880800559308" speed="0">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.50505" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\screen\world_news0001.png">
+                            <collision-poly>
+                                <point x="0.165354" y="0.212121" />
+                                <point x="0.496063" y="0.121212" />
+                                <point x="0.944882" y="0.0707071" />
+                                <point x="0.826772" y="0.777778" />
+                                <point x="0.496063" y="1" />
+                                <point x="0.110236" y="0.858586" />
+                                <point x="0.00787402" y="0.494949" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.50505" original-source="C:\Users\Lukas\Dropbox\IndieGameleon\Assets\Intro\screen\world_news0002.png">
+                            <collision-poly>
+                                <point x="0.165354" y="0.212121" />
+                                <point x="0.496063" y="0.121212" />
+                                <point x="0.795276" y="0.262626" />
+                                <point x="0.88189" y="0.494949" />
+                                <point x="0.826772" y="0.777778" />
+                                <point x="0.496063" y="1" />
+                                <point x="0.110236" y="0.858586" />
+                                <point x="0.00787402" y="0.494949" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Player" sid="3708143993832494">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="66041877023846">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="915005976526966" speed="2">
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\idle\mainchar0001.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\idle\mainchar0002.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\idle\mainchar0003.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\idle\mainchar0004.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="2732213069621002" speed="2">
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\walk\mainchar0005.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\walk\mainchar0006.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\walk\mainchar0007.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Take" pingpong="0" repeatcount="1" repeatto="0" sid="5475494525385743" speed="5">
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\take\mainchar0008.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="Talk" pingpong="0" repeatcount="1" repeatto="0" sid="4502230551104255" speed="3">
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\talk\mainchar0009.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.532407" hotspotY="0.884058" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\talk\mainchar0010.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="UnderWater" pingpong="0" repeatcount="1" repeatto="0" sid="7868196760958427" speed="2">
+                    <frame duration="1" hotspotX="0.690909" hotspotY="0.487324" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0016.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.708333" hotspotY="0.464789" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0017.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="GoingUnderwater" pingpong="0" repeatcount="1" repeatto="0" sid="3202848685516413" speed="5">
+                    <frame duration="1" hotspotX="0.699545" hotspotY="0.884507" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0011.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.60371" hotspotY="0.884194" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0012.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.609108" hotspotY="0.792253" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0013.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.607375" hotspotY="0.72837" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0014.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.612658" hotspotY="0.652582" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0015.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.7" hotspotY="0.501408" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0016.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.712121" hotspotY="0.46831" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\godiving\mainchar0017.png">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="LeavingWater" pingpong="0" repeatcount="1" repeatto="0" sid="1914179495605913" speed="5">
+                    <frame duration="1" hotspotX="0.712121" hotspotY="0.46831">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.7" hotspotY="0.501408">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.612658" hotspotY="0.652582">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.607375" hotspotY="0.72837">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.609108" hotspotY="0.792253">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.60371" hotspotY="0.884194">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.699545" hotspotY="0.884507">
+                        <collision-poly>
+                            <point x="0.518518" y="0.813406" />
+                            <point x="0.745371" y="0.809783" />
+                            <point x="0.787037" y="0.990942" />
+                            <point x="0.407407" y="0.994565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="9" loop="0" name="Hitting" pingpong="0" repeatcount="1" repeatto="0" sid="4455463185767068" speed="5">
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0018.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0019.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0020.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0018.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0019.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0020.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0018.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0019.png" />
+                    <frame duration="1" hotspotX="0.607427" hotspotY="0.97479" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\MainChar\hit\mainchar0020.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="542858274755117">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Mouse" sid="1528105508698784">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Fisher" sid="4409067188245574">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="8007853769292654" speed="2">
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\idle\fisherman0001.png">
+                        <collision-poly>
+                            <point x="0.55267" y="0.034965" />
+                            <point x="0.939394" y="0.736597" />
+                            <point x="0.714286" y="0.904429" />
+                            <point x="0.294372" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\idle\fisherman0002.png">
+                        <collision-poly>
+                            <point x="0.55267" y="0.034965" />
+                            <point x="0.939394" y="0.736597" />
+                            <point x="0.714286" y="0.904429" />
+                            <point x="0.294372" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\idle\fisherman0003.png">
+                        <collision-poly>
+                            <point x="0.55267" y="0.034965" />
+                            <point x="0.939394" y="0.736597" />
+                            <point x="0.714286" y="0.904429" />
+                            <point x="0.294372" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\idle\fisherman0004.png">
+                        <collision-poly>
+                            <point x="0.55267" y="0.034965" />
+                            <point x="0.939394" y="0.736597" />
+                            <point x="0.714286" y="0.904429" />
+                            <point x="0.294372" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="Talk" pingpong="0" repeatcount="1" repeatto="0" sid="2413866168776525" speed="3">
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\talking\fisherman0005.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\talking\fisherman0006.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="GetFish" pingpong="0" repeatcount="1" repeatto="0" sid="8983626150912727" speed="5">
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\getsfish\fisherman0007.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\getsfish\fisherman0008.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\getsfish\fisherman0009.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\getsfish\fisherman0010.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Happy" pingpong="0" repeatcount="1" repeatto="0" sid="2920456267886751" speed="2">
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\happy\fisherman0011.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\happy\fisherman0012.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="HappyTalk" pingpong="0" repeatcount="1" repeatto="0" sid="3099001955432074" speed="4">
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\happytalking\fisherman0013.png" />
+                    <frame duration="1" hotspotX="0.500722" hotspotY="0.501166" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\happytalking\fisherman0014.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="WithoutAngle" pingpong="0" repeatcount="1" repeatto="0" sid="7153642403261535" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\party\fisherman0015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\Fisherman\party\fisherman0016.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dialog" sid="8393867825894571">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fishing_rod" sid="6523016397248518">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860547892918713" speed="5">
+                    <frame duration="1" hotspotX="0.469072" hotspotY="0.47644" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Inventory" sid="7800671478674785">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Item" sid="3024199179407648" type="number" />
+                <instance-variable name="posX" sid="5162702548499048" type="number" />
+                <instance-variable name="posY" sid="4744866035160606" type="number" />
+                <instance-variable name="ItemName" sid="214107767176638" type="string" />
+                <instance-variable name="available" sid="2625638716919412" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="9289138539016333">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="8029639244641363">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="6421586470888061" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_vuvuzela.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_blindmansstick.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_soy.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_fisch.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_hotdog.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_clear.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SceneSwitch" sid="9090734015948381">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Direction" sid="8070832900881461" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8620845045811368" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BlindGuy" sid="2704573762674112">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="294629713395176" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\idle\blind0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\idle\blind0002.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Talk" pingpong="0" repeatcount="1" repeatto="0" sid="4720942168782729" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\talk\blind0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\talk\blind0004.png" />
+                </animation>
+                <animation framecount="9" loop="1" name="IdleHappy" pingpong="0" repeatcount="1" repeatto="0" sid="7114025774939863" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eatin\blind0006.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="TalkHappy" pingpong="0" repeatcount="1" repeatto="0" sid="3182055708022571" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eating-talking\blind0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\eating-talking\blind0009.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="4945729819547024" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\walk\blind0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\BlindGuy\walk\blind0011.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnswerA" sid="809346676560567">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AnswerB" sid="2896364555830682">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AnswerC" sid="6398824019818652">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Hint" sid="9375979031008278">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Pond" sid="7540209114309718">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4499033525785264" speed="5">
+                    <frame duration="1" hotspotX="0.502242" hotspotY="0.454082">
+                        <collision-poly>
+                            <point x="0.331839" y="0.0816327" />
+                            <point x="0.87444" y="0.214286" />
+                            <point x="0.847534" y="0.903061" />
+                            <point x="0.103139" y="0.790816" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TalkingGuy" sid="4494859001618649">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="9" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="3504275690228641" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\idle\talkingguy0003.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Talk" pingpong="0" repeatcount="1" repeatto="0" sid="5343058877470535" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\talking\talkingguy0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\talking\talkingguy0005.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="HappyIdle" pingpong="0" repeatcount="1" repeatto="0" sid="1545478732973917" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\happy\talkingguy0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\happy\talkingguy0009.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="HappyTalk" pingpong="0" repeatcount="1" repeatto="0" sid="2718440481726847" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\happytalking\talkingguy0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\TalkingGuy\happytalking\talkingguy0007.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnswerPositive" sid="1303327913906071">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="AnswerNegative" sid="8232477734569199">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Function" sid="498071096766071">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="GarbageCan" sid="1312133185390513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="WithRacoon" pingpong="0" repeatcount="1" repeatto="0" sid="3715917285419538" speed="5">
+                    <frame duration="1" hotspotX="0.745968" hotspotY="0.347639" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\garbage.png">
+                        <collision-poly>
+                            <point x="0.366935" y="0.0429185" />
+                            <point x="0.862903" y="0.630901" />
+                            <point x="0.794355" y="0.643777" />
+                            <point x="0.669355" y="0.373391" />
+                            <point x="0.862903" y="0.892704" />
+                            <point x="0.229839" y="0.854077" />
+                            <point x="0.0362903" y="0.373391" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="WithoutRacoon" pingpong="0" repeatcount="1" repeatto="0" sid="5583432492979796" speed="5">
+                    <frame duration="1" hotspotX="0.745968" hotspotY="0.347639" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\garbage.png">
+                        <collision-poly>
+                            <point x="0.366935" y="0.0429185" />
+                            <point x="0.862903" y="0.630901" />
+                            <point x="0.794355" y="0.643777" />
+                            <point x="0.669355" y="0.373391" />
+                            <point x="0.862903" y="0.892704" />
+                            <point x="0.229839" y="0.854077" />
+                            <point x="0.0362903" y="0.373391" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BlindmansStick" sid="4345872529269092">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859280880757474" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\blindmansstick.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_park" sid="9029129088345278">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4710230599585613" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\park_hg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_markt" sid="488426020896275">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9299893717236943" speed="5">
+                    <frame duration="1" hotspotX="0.500249" hotspotY="0.500443" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\markt_grossUndHell.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LeaveLake" sid="3096314767742855">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1984285611366227" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HotdogGuy" sid="4244641064175164">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="7470184426847803" speed="2">
+                    <frame duration="1" hotspotX="0.500952" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\HotDogGuy\idle\HotDogGuy0001.png" />
+                    <frame duration="1" hotspotX="0.500952" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\HotDogGuy\idle\HotDogGuy0002.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Talk" pingpong="0" repeatcount="1" repeatto="0" sid="3729090702325934" speed="3">
+                    <frame duration="1" hotspotX="0.500952" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\HotDogGuy\talking\HotDogGuy0003.png" />
+                    <frame duration="1" hotspotX="0.500952" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\HotDogGuy\talking\HotDogGuy0004.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HotdogGuyScream" sid="707510502148228">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Table" sid="3980227898336155">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7786604965795189" speed="5">
+                    <frame duration="1" hotspotX="0.500752" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\table.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="soysauce" sid="5068840576296942">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4918261047894345" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\soybox.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="park_hg" sid="5240370811284313">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5947887218699683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\park_hg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="park_front" sid="7518253993464311">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9614871884909236" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\park_front.png">
+                        <collision-poly>
+                            <point x="0.528125" y="0.938889" />
+                            <point x="0.5" y="0.996296" />
+                            <point x="0.439583" y="0.996296" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hocker" sid="7547694933093582">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8150900277940036" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\hocker.png">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.123377" />
+                            <point x="0.5" y="0" />
+                            <point x="0.916667" y="0.123377" />
+                            <point x="0.776316" y="0.5" />
+                            <point x="0.929825" y="0.896104" />
+                            <point x="0.5" y="0.967532" />
+                            <point x="0.0350877" y="0.948052" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="girl" sid="9566351917730019">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1279049476973975" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501484" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\idle\VuvuzelaGirl0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501493" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\idle\VuvuzelaGirl0002.png" />
+                </animation>
+                <animation framecount="25" loop="0" name="Blow" pingpong="0" repeatcount="1" repeatto="0" sid="5887304181888365" speed="10">
+                    <frame duration="3" hotspotX="-0.0511628" hotspotY="0.485465" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0003.png" />
+                    <frame duration="3" hotspotX="0.366048" hotspotY="0.498584" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0004.png" />
+                    <frame duration="3" hotspotX="0.366048" hotspotY="0.498584" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0005.png" />
+                    <frame duration="1" hotspotX="0.480769" hotspotY="0.503623" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0006.png" />
+                    <frame duration="1" hotspotX="0.42094" hotspotY="0.641304" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0007.png" />
+                    <frame duration="1" hotspotX="0.606838" hotspotY="0.601449" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0008.png" />
+                    <frame duration="1" hotspotX="0.514957" hotspotY="0.525362" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0009.png" />
+                    <frame duration="1" hotspotX="0.393162" hotspotY="0.398551" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0010.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.532609" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0011.png" />
+                    <frame duration="1" hotspotX="0.600427" hotspotY="0.438406" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0012.png" />
+                    <frame duration="1" hotspotX="0.480769" hotspotY="0.503623" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0006.png" />
+                    <frame duration="1" hotspotX="0.42094" hotspotY="0.641304" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0007.png" />
+                    <frame duration="1" hotspotX="0.606838" hotspotY="0.601449" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0008.png" />
+                    <frame duration="1" hotspotX="0.514957" hotspotY="0.525362" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0009.png" />
+                    <frame duration="1" hotspotX="0.393162" hotspotY="0.398551" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0010.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.532609" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0011.png" />
+                    <frame duration="1" hotspotX="0.600427" hotspotY="0.438406" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0012.png" />
+                    <frame duration="1" hotspotX="0.480769" hotspotY="0.503623" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0006.png" />
+                    <frame duration="1" hotspotX="0.42094" hotspotY="0.641304" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0007.png" />
+                    <frame duration="1" hotspotX="0.606838" hotspotY="0.601449" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0008.png" />
+                    <frame duration="1" hotspotX="0.514957" hotspotY="0.525362" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0009.png" />
+                    <frame duration="1" hotspotX="0.393162" hotspotY="0.398551" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0010.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.532609" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0011.png" />
+                    <frame duration="1" hotspotX="0.600427" hotspotY="0.438406" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0012.png" />
+                    <frame duration="1" hotspotX="0.366048" hotspotY="0.498584" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\blow\VuvuzelaGirl0005.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Talk" pingpong="0" repeatcount="1" repeatto="0" sid="2355071298670012" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\talk\VuvuzelaGirl0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\talk\VuvuzelaGirl0014.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="5565456789334965" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501484" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\walk\VuvuzelaGirl0015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501449" original-source="E:\Dropbox\IndieGameleon\Assets\Chars\VuvuzelaGirl\walk\VuvuzelaGirl0016.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Vuvuzela" sid="439102663958975">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7134444477235548" speed="5">
+                    <frame duration="1" hotspotX="-0.0379747" hotspotY="0.418605" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\vuvuzela.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Smartphone" sid="2727007984363444">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507923156303439" speed="5">
+                    <frame duration="1" hotspotX="0.516529" hotspotY="0.443203" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\smartphone.png.png">
+                        <collision-poly>
+                            <point x="0.0585683" y="0.0502793" />
+                            <point x="0.498915" y="0.018622" />
+                            <point x="0.943601" y="0.0484171" />
+                            <point x="0.986985" y="0.499069" />
+                            <point x="0.969631" y="0.973929" />
+                            <point x="0.0281996" y="0.975791" />
+                            <point x="0.0260304" y="0.499069" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Countdown" sid="7499605542809522">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="blocked" sid="1445438447311645">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5873220749201421" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MessagesHeader" sid="4615070909001664">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1305917548589167">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657443623396706" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\Messages Header.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FishStore" sid="7639722759418675">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1091318337808818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="brunnen" sid="8113868918389308">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7317120460665165" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="market" sid="4415444488549912">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877662052457893" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="middle" sid="9610002385531582">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="6813500706024981">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2500287990300313" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button_Start" sid="7334430366666064">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6702489442397852" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502513" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\start_button.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="msg_going" sid="3510761928245292">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="3785522629248409">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8590391734963069" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msg_1going.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msg_2going.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msg_3going.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msg_4going.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msg_5going.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="msg_time" sid="7185453187516711">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1077780553445817">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1716193584051769" speed="5">
+                    <frame duration="1" hotspotX="0.501272" hotspotY="0.558824" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time0,5.png">
+                        <collision-poly>
+                            <point x="0.00508906" y="0.0196078" />
+                            <point x="0.997455" y="0.0196078" />
+                            <point x="0.997455" y="0.558824" />
+                            <point x="0.969466" y="0.990196" />
+                            <point x="0.0330789" y="0.990196" />
+                            <point x="0.00508906" y="0.558824" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time1.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time2.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time3.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time4.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time5.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time6.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time7.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time8.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time9.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\messetsches\msgblock_time10.png">
+                        <collision-poly>
+                            <point x="0.00255102" y="0.01" />
+                            <point x="0.997449" y="0.01" />
+                            <point x="0.997449" y="0.99" />
+                            <point x="0.00255102" y="0.99" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="9patch" sid="4490802036691861">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="inventory_clear" sid="6516455057257969">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2481783965455384" speed="5">
+                    <frame duration="1" hotspotX="0.997333" hotspotY="0.986667" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\inventory_clear.png">
+                        <image-point name="Item1" x="0.1" y="0.5" />
+                        <image-point name="Item2" x="0.3" y="0.5" />
+                        <image-point name="Item3" x="0.5" y="0.5" />
+                        <image-point name="Item4" x="0.7" y="0.5" />
+                        <image-point name="Item5" x="0.9" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_city" sid="9609300283714944">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600402141385058" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\stadt.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.971354" y="0.949074" />
+                            <point x="0.5" y="0.97037" />
+                            <point x="0.0536458" y="0.90463" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="6251002553485558">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1454011298477368" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\stadt_busch_front.png">
+                        <collision-poly>
+                            <point x="0.466667" y="0.82963" />
+                            <point x="0.5" y="0.84537" />
+                            <point x="0.532292" y="0.831481" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="3536190481103767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9113451290079568" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\stadt_busch_RichtungMarkt.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="strudel" sid="3065177264186332">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6440386433631412" speed="5">
+                    <frame duration="1" hotspotX="0.624701" hotspotY="0.64866" original-source="E:\Dropbox\IndieGameleon\Assets\Intro\szene3\strudel.png">
+                        <collision-poly>
+                            <point x="0.162504" y="0.205272" />
+                            <point x="0.499829" y="0.054019" />
+                            <point x="0.830996" y="0.213483" />
+                            <point x="0.994868" y="0.5" />
+                            <point x="0.946288" y="0.932152" />
+                            <point x="0.499829" y="0.955056" />
+                            <point x="0.540541" y="0.3172" />
+                            <point x="0.16182" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_text_hotdogguy" sid="6130790672258344">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8741782877804201" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\textbox.png">
+                        <collision-poly>
+                            <point x="0.00352113" y="0.0301205" />
+                            <point x="0.5" y="0" />
+                            <point x="0.997183" y="0.0240964" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="floss" sid="9360736331898205">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661358683728975" speed="5">
+                    <frame duration="1" hotspotX="0.502008" hotspotY="0.503876" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\floss.png">
+                        <collision-poly>
+                            <point x="0.100402" y="0.193798" />
+                            <point x="0.497992" y="0.00775194" />
+                            <point x="0.823293" y="0.341085" />
+                            <point x="0.899598" y="0.496124" />
+                            <point x="0.911647" y="0.829457" />
+                            <point x="0.497992" y="0.899225" />
+                            <point x="0.120482" y="0.767442" />
+                            <point x="0.064257" y="0.496124" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="racoonhit" sid="5990851412794995">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1113803356433107" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-idle.png" />
+                </animation>
+                <animation framecount="6" loop="0" name="Hitted" pingpong="0" repeatcount="1" repeatto="0" sid="7366641393585946" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-hit-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-hit-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-hit-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-hit-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-hit-5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501247" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\racoon\racoon-hit-6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="taube" sid="6688568550067723">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="16" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5705435822063609" speed="3">
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-1.png">
+                        <collision-poly>
+                            <point x="0.410526" y="0.557143" />
+                            <point x="0.494737" y="0.157143" />
+                            <point x="0.747368" y="0.342857" />
+                            <point x="0.652632" y="0.5" />
+                            <point x="0.663158" y="0.542857" />
+                            <point x="0.494737" y="0.957143" />
+                            <point x="0.126316" y="0.828571" />
+                            <point x="0.0631579" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-2.png">
+                        <collision-poly>
+                            <point x="0.410526" y="0.557143" />
+                            <point x="0.494737" y="0.457143" />
+                            <point x="0.789474" y="0.285714" />
+                            <point x="0.673684" y="0.5" />
+                            <point x="0.694737" y="0.585714" />
+                            <point x="0.494737" y="0.971429" />
+                            <point x="0.126316" y="0.828571" />
+                            <point x="0.0631579" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-1.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-2.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-1.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-2.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-1.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-2.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-1.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-2.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-1.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-2.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-3.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-4.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-5.png" />
+                    <frame duration="1" hotspotX="0.505263" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Objects\taubenschwan\taube-6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wave" sid="6335640889286078">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9536648794939" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\water\wave-1.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.399074" />
+                            <point x="0.817187" y="0.325" />
+                            <point x="0.863021" y="0.5" />
+                            <point x="0.730208" y="0.52037" />
+                            <point x="0.5" y="0.400926" />
+                            <point x="0.751562" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\water\wave-2.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.397222" />
+                            <point x="0.816146" y="0.326852" />
+                            <point x="0.871354" y="0.5" />
+                            <point x="0.727604" y="0.515741" />
+                            <point x="0.5" y="0.399074" />
+                            <point x="0.760938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\water\wave-3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dialog_BG" sid="1134038945814473">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="744520832231396" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\textbox.png">
+                        <collision-poly>
+                            <point x="0.00668151" y="0.0588235" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994432" y="0.0490196" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Answer_bg" sid="2915022901893148">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8194438086409019" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\answerbox.png">
+                        <collision-poly>
+                            <point x="0.00668151" y="0.0588235" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994432" y="0.0490196" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dialog_fisher" sid="7649093571328318">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bg_talky_guy" sid="8932230116763087">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4747402870621962" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\answerbox.png">
+                        <collision-poly>
+                            <point x="0.00668151" y="0.0588235" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994432" y="0.0490196" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_hint" sid="5002373719209334">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1094334524654072" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\GUI\answerbox.png">
+                        <collision-poly>
+                            <point x="0.00668151" y="0.0588235" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994432" y="0.0490196" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_wohnung_party" sid="9567139589339792">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2500752400245344" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\wohnung_party.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="3233590343889154">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7872582809583267" speed="0">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="1707682806025361">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bg_wohnung" sid="468933489263651">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5344243353871301" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\start.png">
+                        <collision-poly>
+                            <point x="0.00145773" y="0.00239234" />
+                            <point x="0.998542" y="0.00239234" />
+                            <point x="0.998542" y="0.997608" />
+                            <point x="0.00145773" y="0.997608" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="logoadventuretiem" sid="856684813061574">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="8781291408227668">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8710143551045209" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\logo-adventure-tiem.png">
+                        <collision-poly>
+                            <point x="0.11413" y="0.228261" />
+                            <point x="0.5" y="0.184783" />
+                            <point x="0.913043" y="0.173913" />
+                            <point x="0.994565" y="0.5" />
+                            <point x="0.811594" y="0.623188" />
+                            <point x="0.5" y="0.778986" />
+                            <point x="0.103261" y="0.793478" />
+                            <point x="0.26087" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="6733472366157044">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="zeichen" sid="1021294462004053">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2531694336282186" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502994" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\zeichen_markt.png">
+                        <collision-poly>
+                            <point x="0.0776699" y="0.0958084" />
+                            <point x="0.5" y="0" />
+                            <point x="0.956311" y="0.0538922" />
+                            <point x="0.582524" y="0.497006" />
+                            <point x="0.582524" y="0.48503" />
+                            <point x="0.5" y="0.976048" />
+                            <point x="0.466019" y="0.42515" />
+                            <point x="0.470874" y="0.497006" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\zeichen_park.png">
+                        <collision-poly>
+                            <point x="0.15534" y="0.188235" />
+                            <point x="0.5" y="0.0588235" />
+                            <point x="0.961165" y="0.0470588" />
+                            <point x="0.601942" y="0.5" />
+                            <point x="0.601942" y="0.517647" />
+                            <point x="0.5" y="0.541176" />
+                            <point x="0.466019" y="0.435294" />
+                            <point x="0.495146" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Dropbox\IndieGameleon\Assets\Backgrounds\zeichen_stadt.png">
+                        <collision-poly>
+                            <point x="0.0485437" y="0.0595238" />
+                            <point x="0.5" y="0.00595238" />
+                            <point x="0.917476" y="0.10119" />
+                            <point x="0.529126" y="0.5" />
+                            <point x="0.529126" y="0.422619" />
+                            <point x="0.5" y="0.982143" />
+                            <point x="0.412621" y="0.494048" />
+                            <point x="0.412621" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="logo_lenuke_small" sid="9940211205463829">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9122019220093193" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lars.engel\Downloads\small.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.02" />
+                            <point x="0.973333" y="0.0266667" />
+                            <point x="0.973333" y="0.973333" />
+                            <point x="0.0266667" y="0.973333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="logo_iris" sid="4584635014918837">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6306813753314355" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.5" original-source="C:\Users\lars.engel\Downloads\logo.png">
+                        <collision-poly>
+                            <point x="0.496183" y="0" />
+                            <point x="0.671756" y="0.330769" />
+                            <point x="0.885496" y="0.5" />
+                            <point x="0.687023" y="0.684615" />
+                            <point x="0.496183" y="0.830769" />
+                            <point x="0.0534351" y="0.946154" />
+                            <point x="0.236641" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="1939182393865557">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9934584378295545" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title_Description" sid="9442754365046115">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="9801461582535805">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Object" plugin-id="Sprite" sid="4082762292973839">
+            <members>
+                <member>BlindGuy</member>
+                <member>BlindmansStick</member>
+                <member>Fisher</member>
+                <member>fishing_rod</member>
+                <member>FishStore</member>
+                <member>GarbageCan</member>
+                <member>girl</member>
+                <member>HotdogGuy</member>
+                <member>Inventory</member>
+                <member>inventory_clear</member>
+                <member>Pond</member>
+                <member>soysauce</member>
+                <member>TalkingGuy</member>
+                <member>Vuvuzela</member>
+            </members>
+        </family>
+        <family name="Answers" plugin-id="Text" sid="4693428774326525">
+            <members>
+                <member>AnswerA</member>
+                <member>AnswerB</member>
+                <member>AnswerC</member>
+            </members>
+        </family>
+        <family name="Notifications" plugin-id="Sprite" sid="9804407483029243">
+            <members>
+                <member>msg_going</member>
+                <member>msg_time</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Order" sid="7220305537733002" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin2" sid="85508209399288">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Textes" plugin-id="Text" sid="7538312358638176">
+            <members>
+                <member>AnswerA</member>
+                <member>AnswerB</member>
+                <member>AnswerC</member>
+                <member>AnswerNegative</member>
+                <member>AnswerPositive</member>
+                <member>Countdown</member>
+                <member>Dialog</member>
+                <member>dialog_fisher</member>
+                <member>Hint</member>
+                <member>HotdogGuyScream</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout-folder name="Intro">
+            <layout>Layout_Intro_1.xml</layout>
+            <layout>Layout_Intro_2.xml</layout>
+            <layout>Layout_Intro_3.xml</layout>
+            <layout>Layout_TeamLogo.xml</layout>
+        </layout-folder>
+        <layout-folder name="Game">
+            <layout>Layout_Park.xml</layout>
+            <layout>Layout_Market.xml</layout>
+            <layout>Layout_City.xml</layout>
+        </layout-folder>
+        <layout>Layout_Title.xml</layout>
+        <layout>Layout_End.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="Intro">
+            <event-sheet>Event_Intro_1.xml</event-sheet>
+            <event-sheet>Event_Intro_2.xml</event-sheet>
+            <event-sheet>Event_Intro_3.xml</event-sheet>
+            <event-sheet>Event_Logo.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Game">
+            <event-sheet>Event_City.xml</event-sheet>
+            <event-sheet>Event_Market.xml</event-sheet>
+            <event-sheet>Event_Park.xml</event-sheet>
+            <event-sheet>General.xml</event-sheet>
+            <event-sheet>Inventory.xml</event-sheet>
+        </event-folder>
+        <event-sheet>Event_Title.xml</event-sheet>
+        <event-sheet>Event_End.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Function" uid="45" />
+        <global-instance type="Audio" uid="147">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="vuvuzela.m4a" />
+        <file name="vuvuzela.ogg" />
+        <file name="keyboardtipping.m4a" />
+        <file name="keyboardtipping.ogg" />
+        <file name="notification.m4a" />
+        <file name="notification.ogg" />
+        <file name="underwater.m4a" />
+        <file name="underwater.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="music_game.m4a" />
+        <file name="music_game.ogg" />
+        <file name="music_panic.m4a" />
+        <file name="music_panic.ogg" />
+        <file name="music_party.m4a" />
+        <file name="music_party.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="generator_config.txt" />
+        <file name="lenukefont-demo.html" />
+        <file name="lenukefont-webfont.eot" />
+        <file name="lenukefont-webfont.svg" />
+        <file name="lenukefont-webfont.ttf" />
+        <file name="lenukefont-webfont.woff" />
+        <file name="lenukefont-webfont.woff2" />
+        <file name="stylesheet.css" />
+    </files-folder>
+</c2project>

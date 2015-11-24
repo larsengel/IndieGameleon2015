@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_Logo</name>
+    <events>
+        <event-block sid="1366374256103292">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="853564738420082" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="9501527265808334" type="logoadventuretiem" />
+            </actions>
+        </event-block>
+        <event-block sid="1684958882393431">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="1108471104064269" type="logoadventuretiem" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8019655749228476" type="System">
+                    <param id="0" name="Layout">Layout_Intro_1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

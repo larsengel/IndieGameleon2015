@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>General</name>
+    <events>
+        <include>Inventory</include>
+        <variable constant="0" name="GirlAway" sid="936877732911151" static="0" type="number">0</variable>
+        <variable constant="0" name="countdownTime" sid="9499852431068521" static="0" type="number">600</variable>
+        <variable constant="0" name="StickAway" sid="8646571090279689" static="0" type="number">0</variable>
+        <variable constant="0" name="SoySauceAway" sid="5412377445574411" static="0" type="number">0</variable>
+        <variable constant="0" name="RacoonAway" sid="7050885352322401" static="0" type="number">0</variable>
+        <variable constant="0" name="ItemHotdog" sid="2340872091378259" static="0" type="number">0</variable>
+        <variable constant="0" name="ItemStick" sid="3321310424271316" static="0" type="number">0</variable>
+        <variable constant="0" name="ItemVuvuzela" sid="4292889882353844" static="0" type="number">0</variable>
+        <variable constant="0" name="ItemSoySauce" sid="7249728700543829" static="0" type="number">0</variable>
+        <variable constant="0" name="ItemFishbone" sid="4017093151660182" static="0" type="number">0</variable>
+        <variable constant="0" name="FisherHasFish" sid="1172103239038902" static="0" type="number">0</variable>
+        <variable constant="0" name="HappyPeople" sid="1346776700713586" static="0" type="number">0</variable>
+        <variable constant="0" name="HappyTalker" sid="2602356745777592" static="0" type="number">0</variable>
+        <variable constant="0" name="BlindGuyPosition" sid="4232028251652076" static="0" type="number">0</variable>
+        <variable constant="1" name="SPEED" sid="8091857405815064" static="0" type="number">300</variable>
+        <variable constant="0" name="a" sid="1236751324160396" static="0" type="number">0</variable>
+        <variable constant="0" name="targetY" sid="3937021966896834" static="0" type="number">0</variable>
+        <variable constant="0" name="targetX" sid="2907886318849171" static="0" type="number">0</variable>
+        <event-block sid="9538681032624898">
+            <conditions>
+                <condition id="4" name="On finished" sid="7519781857438366" type="Player">
+                    <param id="0" name="Animation">&quot;Take&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4020311051632158" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5680221555339774">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="1774452584848452" type="Touch" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2624545736937601">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="2186652049380267" type="Touch">
+                            <param id="0" name="Object">Object</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="6042365881687621" type="Touch">
+                            <param id="0" name="Object">Answers</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="5665639063147434" type="Answers" />
+                        <condition id="0" name="Compare text" sid="7338184892441424" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="5298224639843055" type="Player">
+                            <param id="0" name="Animation">&quot;UnderWater&quot;</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="722868741245692" type="AnswerPositive" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="4192470334685322" type="AnswerNegative" />
+                        <condition id="2" inverted="1" name="Is playing" sid="1640521849221432" type="Player">
+                            <param id="0" name="Animation">&quot;LeavingWater&quot;</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="2444834474263484" type="Touch">
+                            <param id="0" name="Object">blocked</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6686132091319322" type="System">
+                            <param id="0" name="Variable">targetX</param>
+                            <param id="1" name="Value">Touch.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1336641846084582" type="System">
+                            <param id="0" name="Variable">targetY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5459792702817842" type="Player">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5930766000853105" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">angle(Player.X, Player.Y, Touch.X,  Touch.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7380201151874674">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="6542397480878653" type="Player">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">targetX - 5</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="2336113476957142" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">targetX + 5</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="7472551351087189" type="Player">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">targetY - 5</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="425976333829209" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">targetY + 5</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="4669839068070741" type="Player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3871674628837197" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6582444364150522">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1124109972576492" type="System">
+                    <param id="0" name="First value">distance(Player.X, Player.Y, targetX, targetY)</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="9065377117053871">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="3689263877408705" type="Player">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="4192001687812546" type="Player">
+                            <param id="0" name="Animation">&quot;GoingUnderwater&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="1769471384692071" type="Player">
+                            <param id="0" name="Animation">&quot;LeavingWater&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8637514983109975" type="Player">
+                            <param id="0" name="X">Self.X + cos(a) * speed * dt</param>
+                            <param id="1" name="Y">Self.Y + sin(a) * speed * dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3131488594378105">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1618592939469634" type="System">
+                    <param id="0" name="Variable">a</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">-90</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9366725232128248" type="System">
+                    <param id="0" name="Variable">a</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="4715195258532508" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="8248140989940543">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4460029871379558" type="System">
+                    <param id="0" name="Variable">a</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">-90</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2284656474384466" type="System">
+                    <param id="0" name="Variable">a</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="274076680313505" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8260873083555727">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="248929519031403" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="6760270706317565" type="Inventory" />
+            </actions>
+        </event-block>
+        <event-block sid="9006857767724522">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="9331652303204198" type="Mouse">
+                    <param id="0" name="Object">Object</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7980571456745359" type="Hint">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7953736059722156">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3897558237786891" type="Mouse">
+                    <param id="0" name="Object">BlindGuy</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="5131526044294018" type="BlindGuy" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="46791497259793" type="Hint">
+                    <param id="0" name="Text">&quot;Blind Guy&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2291421863620434">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="2459032570967629" type="Inventory" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3788576330324904" type="Hint">
+                            <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with blind guy&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="4233956444196552" title="Dialog">
+            <sub-events>
+                <event-block sid="7358342617727493">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2689634307297155" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="5796520080557663" type="Hint">
+                            <param id="0" name="X">1559</param>
+                            <param id="1" name="Y">65</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="2203397314647089" type="bg_hint">
+                            <param id="0" name="Object">Hint</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1564369739969066">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="8911550769855825" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="5636208090646725" type="Inventory">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7335406083763691">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4779894472111493" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="8044936653020763" type="Inventory">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6172836794898576">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9471178425057594" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="4402882258758064" type="System">
+                    <param id="0" name="Variable">countdownTime</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2401734628269369">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7709964151160238" type="System" />
+                        <condition id="-14" name="Compare variable" sid="3553958413894865" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">599</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4449297574664285">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="8302629803189752" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1730320421524308" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="2893460817266402" type="msg_time">
+                                    <param id="0" name="Frame number">10</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="8803039058392188" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6202206770087953" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="5107225745016857" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3760348042201196">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="8442617824290572" type="System" />
+                        <condition id="-14" name="Compare variable" sid="9053883815614455" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">540</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4730567699589159">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="2669676138071394" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4899857521273734" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="553280937942155" type="msg_time">
+                                    <param id="0" name="Frame number">9</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="5267379208489375" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5772750690868356" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="8338369386349903" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8076350288097358">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2007699962063754" type="System" />
+                        <condition id="-14" name="Compare variable" sid="6359536781839928" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">480</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1779103006168714">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="6258457351063891" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9623194607853339" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="321255204963734" type="msg_time">
+                                    <param id="0" name="Frame number">8</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="5687034838992304" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5229905535000676" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="9208509349859602" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="780883635179214">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7299807554643637" type="System" />
+                        <condition id="-14" name="Compare variable" sid="6975371961642121" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">420</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6295931464421901">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="3171991327939238" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4731777505267168" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="4098088857694437" type="msg_time">
+                                    <param id="0" name="Frame number">7</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="2190386840533484" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2112036232569449" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="4894235285070378" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3439238552021714">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="8449978596315377" type="System" />
+                        <condition id="-14" name="Compare variable" sid="8694986310915086" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">360</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4947678893011191">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="4787357990873532" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1704170357138228" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="36103701939698" type="msg_time">
+                                    <param id="0" name="Frame number">6</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="4269786355735263" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9137375105088141" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="4312130181621112" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3327619260936238">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="994725644534418" type="System" />
+                        <condition id="-14" name="Compare variable" sid="5058621196808667" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2503492104352075">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="5238685282563625" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6248299683703387" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6426579753075309" type="msg_time">
+                                    <param id="0" name="Frame number">5</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="9409178701622872" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2619123565722334" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="3626113224823819" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9726085789363422">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="518365970237538" type="System" />
+                        <condition id="-14" name="Compare variable" sid="7806856501098784" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">240</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7353875817947135">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="490806853536977" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8206129101118845" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="9742957328898288" type="msg_time">
+                                    <param id="0" name="Frame number">4</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="2902370187658611" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9800728522128321" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="5650170702141056" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1214192707341374">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7921089416875592" type="System" />
+                        <condition id="-14" name="Compare variable" sid="1245981009355095" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">180</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8464965455554621">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="6873241069769929" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1055804544236759" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="9518131244497433" type="msg_time">
+                                    <param id="0" name="Frame number">3</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="6900577930257595" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9503704016776148" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="4909869105174531" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3921470743444596">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9916342742604394" type="System" />
+                        <condition id="-14" name="Compare variable" sid="5152399831695446" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">120</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="612689338484702">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="2435837240544384" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5698619729005255" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="8629720858246104" type="msg_time">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="1318582261803169" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3409297300876274" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="1318824198972616" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6175667796865059">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7507745448287803" type="System" />
+                        <condition id="-14" name="Compare variable" sid="1751004588626416" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4684857928875057">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="859517696290781" type="System">
+                                    <param id="0" name="Object to create">msg_time</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8105645876769667" type="msg_time">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="624164704743211" type="msg_time">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="8319834592946564" type="msg_time">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3323002230548442" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Play" sid="4673142991020394" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5707546417523287">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="3077112886078051" type="System" />
+                        <condition id="-14" name="Compare variable" sid="6590874863946188" type="System">
+                            <param id="0" name="Variable">countdownTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9307113504124547" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1195838572175757" type="Dialog">
+                            <param id="0" name="Text">&quot;Time to go home... The party begins!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2658531576509419" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="9996794491262326" type="System">
+                            <param id="0" name="Layout">Layout_End</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3940494937176254">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6043004309835548" type="Mouse">
+                    <param id="0" name="Object">Smartphone</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="3112056025681481" type="Smartphone">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">920</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="4563905353162899" type="Smartphone">
+                    <param id="0" name="X">Self.X + cos(-90) * speed * dt</param>
+                    <param id="1" name="Y">Self.Y + sin(-90) * speed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6810578684812619">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="1710543477016885" type="Mouse">
+                    <param id="0" name="Object">Smartphone</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="981150577272543" type="Smartphone">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">1100</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="6682554769691111" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9965376648761788" type="Smartphone">
+                    <param id="0" name="X">Self.X + cos(90) * speed * dt</param>
+                    <param id="1" name="Y">Self.Y + sin(90) * speed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8444551993817734">
+            <conditions>
+                <condition id="-18" name="On created" sid="5314364896348214" type="msg_time" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="556130420598639" type="msg_time" />
+                <action id="-25" name="Move to bottom" sid="5920461798734361" type="Smartphone" />
+            </actions>
+        </event-block>
+        <event-block sid="6442747294642854">
+            <conditions>
+                <condition id="-18" name="On created" sid="365862185541445" type="msg_going" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="213481124216452" type="msg_going" />
+                <action id="-25" name="Move to bottom" sid="4425740020297103" type="Smartphone" />
+            </actions>
+        </event-block>
+        <event-block sid="6366339632592069">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1330041793745136" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5282096093304416" type="MessagesHeader">
+                    <param id="0" name="Pin to">Smartphone</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7134001336697969">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8086175125140724" type="System">
+                            <param id="0" name="Object">Notifications</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="829534614398219" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="5798389301214506" type="Notifications" />
+                        <action id="-3" name="Set position" sid="6726692905209859" type="Notifications">
+                            <param id="0" name="X">231</param>
+                            <param id="1" name="Y">Smartphone.Y + 120</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="2248188713477836" type="Notifications">
+                            <param id="0" name="Pin to">Smartphone</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9226921806853949">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2874336328165611" type="System">
+                            <param id="0" name="Object">Notifications</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5871977787925024" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="114059695194119" type="Notifications" />
+                        <action id="-3" name="Set position" sid="3639122036818532" type="Notifications">
+                            <param id="0" name="X">Smartphone.X + 5</param>
+                            <param id="1" name="Y">Smartphone.Y + 35</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="1257834385091537" type="Notifications">
+                            <param id="0" name="Pin to">Smartphone</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4399236583920242">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9973322459233689" type="System">
+                            <param id="0" name="Object">Notifications</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8048005670304857" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="9867727197784314" type="Notifications" />
+                        <action id="-3" name="Set position" sid="9140959820717605" type="Notifications">
+                            <param id="0" name="X">Smartphone.X + 5</param>
+                            <param id="1" name="Y">Smartphone.Y  - 50</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="4716913543424066" type="Notifications">
+                            <param id="0" name="Pin to">Smartphone</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="3330444587415473">
+            <conditions>
+                <condition id="0" name="On function" sid="756430107522596" type="Function">
+                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3419041236849549">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="4394854565522195" type="System">
+                            <param id="0" name="Object">Notifications</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3094646752369428" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="921370517004534" type="Notifications" />
+                    </actions>
+                </event-block>
+                <event-block sid="9140460019472544">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7927471160491354" type="System">
+                            <param id="0" name="Object">Notifications</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="151434904622699" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="14153282107581" type="Notifications" />
+                        <action id="-3" name="Set position" sid="8327655561529509" type="Notifications">
+                            <param id="0" name="X">231</param>
+                            <param id="1" name="Y">Smartphone.Y + 120</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3780192445466157" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="1730073756610028" type="Notifications">
+                            <param id="0" name="Pin to">Smartphone</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6421353183493171">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9258409734690505" type="System">
+                            <param id="0" name="Object">Notifications</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="415482994426138" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="7639274233013921" type="Notifications" />
+                        <action id="-3" name="Set position" sid="8301161104461476" type="Notifications">
+                            <param id="0" name="X">Smartphone.X + 5</param>
+                            <param id="1" name="Y">Smartphone.Y + 35</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9964019118741771" type="Notifications">
+                            <param id="0" name="Instance variable">Order</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="7891496313058041" type="Notifications">
+                            <param id="0" name="Pin to">Smartphone</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1517426414145963">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7281081181391666" type="System" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="8774976196019618" type="Smartphone" />
+                <action id="5" name="Set web font" sid="8479290339456087" type="Textes">
+                    <param id="0" name="Family name">&quot;lenukefontmedium&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3981210613394345" type="Inventory">
+                    <param id="0" name="Pin to">inventory_clear</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="2839862520064373" type="inventory_clear">
+                    <param id="0" name="X">1920</param>
+                    <param id="1" name="Y">1080</param>
+                </action>
+                <action id="3" name="Set font size" sid="7766769445880877" type="Hint">
+                    <param id="0" name="Size (pt)">28</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3984811144856151">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8394184474974993" type="System">
+                    <param id="0" name="Variable">HappyPeople</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1815216044752795" type="Dialog_BG">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8612307607805886" type="Dialog">
+                    <param id="0" name="Text">&quot;Time to go home...!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="4458889925092666" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7708034389097938" type="System">
+                    <param id="0" name="Layout">Layout_End</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2271270866430578">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6730507736950878" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8575475805936628" type="Text">
+                    <param id="0" name="Text">countdownTime</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

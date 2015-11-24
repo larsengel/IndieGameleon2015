@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">Layout_Title</layout>
+        <layout order="2">Layout_TeamLogo</layout>
+        <layout order="9">Layout_City</layout>
+        <layout active="1" order="14">Layout_End</layout>
+        <event-sheet order="0">Event_Logo</event-sheet>
+        <event-sheet order="3">Event_Intro_1</event-sheet>
+        <event-sheet order="4">Event_Intro_2</event-sheet>
+        <event-sheet order="5">Event_Intro_3</event-sheet>
+        <event-sheet order="6">Event_End</event-sheet>
+        <event-sheet order="7">General</event-sheet>
+        <event-sheet order="8">Event_Title</event-sheet>
+        <event-sheet order="10">Event_City</event-sheet>
+        <event-sheet order="11">Event_Market</event-sheet>
+        <event-sheet order="12">Event_Park</event-sheet>
+        <event-sheet order="13">Inventory</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="1" name="Object" />
+        <family expanded="1" name="Answers" />
+        <family expanded="1" name="Notifications" />
+        <family expanded="1" name="Textes" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Intro/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/Intro/" />
+        <folder expanded="1" path="layout-folder/Game/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/Intro/" />
+        <folder expanded="1" path="event-folder/Game/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/intro1_spectator/" />
+        <folder expanded="1" path="animation-folder/intro_bg_szene/" />
+        <folder expanded="1" path="animation-folder/intro_mainchar_browsing/" />
+        <folder expanded="1" path="animation-folder/intro_mainchar_frightened/" />
+        <folder expanded="1" path="animation-folder/intro_messagebubble/" />
+        <folder expanded="1" path="animation-folder/intro_pc/" />
+        <folder expanded="1" path="animation-folder/intro_pcscreen/" />
+        <folder expanded="1" path="animation-folder/intro_szene3_background/" />
+        <folder expanded="1" path="animation-folder/world_news/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/Fisher/" />
+        <folder expanded="1" path="animation-folder/fishing_rod/" />
+        <folder expanded="1" path="animation-folder/Inventory/" />
+        <folder expanded="1" path="animation-folder/SceneSwitch/" />
+        <folder expanded="1" path="animation-folder/BlindGuy/" />
+        <folder expanded="1" path="animation-folder/Pond/" />
+        <folder expanded="1" path="animation-folder/TalkingGuy/" />
+        <folder expanded="1" path="animation-folder/GarbageCan/" />
+        <folder expanded="1" path="animation-folder/BlindmansStick/" />
+        <folder expanded="1" path="animation-folder/bg_park/" />
+        <folder expanded="1" path="animation-folder/bg_markt/" />
+        <folder expanded="1" path="animation-folder/LeaveLake/" />
+        <folder expanded="1" path="animation-folder/HotdogGuy/" />
+        <folder expanded="1" path="animation-folder/Table/" />
+        <folder expanded="1" path="animation-folder/soysauce/" />
+        <folder expanded="1" path="animation-folder/park_hg/" />
+        <folder expanded="1" path="animation-folder/park_front/" />
+        <folder expanded="1" path="animation-folder/hocker/" />
+        <folder expanded="1" path="animation-folder/girl/" />
+        <folder expanded="1" path="animation-folder/Vuvuzela/" />
+        <folder expanded="1" path="animation-folder/Smartphone/" />
+        <folder expanded="1" path="animation-folder/blocked/" />
+        <folder expanded="1" path="animation-folder/MessagesHeader/" />
+        <folder expanded="1" path="animation-folder/FishStore/" />
+        <folder expanded="1" path="animation-folder/brunnen/" />
+        <folder expanded="1" path="animation-folder/market/" />
+        <folder expanded="1" path="animation-folder/middle/" />
+        <folder expanded="1" path="animation-folder/Button_Start/" />
+        <folder expanded="1" path="animation-folder/msg_going/" />
+        <folder expanded="1" path="animation-folder/msg_time/" />
+        <folder expanded="1" path="animation-folder/inventory_clear/" />
+        <folder expanded="1" path="animation-folder/bg_city/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/strudel/" />
+        <folder expanded="1" path="animation-folder/bg_text_hotdogguy/" />
+        <folder expanded="1" path="animation-folder/floss/" />
+        <folder expanded="1" path="animation-folder/racoonhit/" />
+        <folder expanded="1" path="animation-folder/taube/" />
+        <folder expanded="1" path="animation-folder/wave/" />
+        <folder expanded="1" path="animation-folder/Dialog_BG/" />
+        <folder expanded="1" path="animation-folder/Answer_bg/" />
+        <folder expanded="1" path="animation-folder/bg_talky_guy/" />
+        <folder expanded="1" path="animation-folder/bg_hint/" />
+        <folder expanded="1" path="animation-folder/bg_wohnung_party/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/bg_wohnung/" />
+        <folder expanded="1" path="animation-folder/logoadventuretiem/" />
+        <folder expanded="1" path="animation-folder/zeichen/" />
+        <folder expanded="1" path="animation-folder/logo_lenuke_small/" />
+        <folder expanded="1" path="animation-folder/logo_iris/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+    </folders-expanded>
+</c2uistate>

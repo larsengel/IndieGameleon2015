@@ -1,0 +1,1261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_Market</name>
+    <events>
+        <variable constant="0" name="MovingOut" sid="1564865738140278" static="0" type="number">0</variable>
+        <include>General</include>
+        <event-block sid="7335533306412615">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9030987178572075" type="Player">
+                    <param id="0" name="Object">SceneSwitch</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9609436598688407">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5546273020308141" type="SceneSwitch">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="374145237535416" type="System">
+                            <param id="0" name="Layout">Layout_Park</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4861378140642969" type="System">
+                            <param id="0" name="Variable">blindGuyAngle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7009140353251956">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9841382111169204" type="SceneSwitch">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2228855472975461" type="System">
+                            <param id="0" name="Layout">Layout_City</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3634594891537727" type="System">
+                            <param id="0" name="Variable">blindGuyAngle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1678058260172344">
+            <conditions>
+                <condition id="3" name="On touched object" sid="230404763260948" type="Touch">
+                    <param id="0" name="Object">BlindGuy</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="3345238203701063" type="BlindGuy" />
+                <condition id="-9" inverted="1" name="Is visible" sid="8893865219708202" type="Answers" />
+                <condition id="2" inverted="1" name="Is playing" sid="9773916273953272" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                </condition>
+                <condition id="0" name="Compare text" sid="3104837212472551" type="Dialog">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9614365892600091" type="System">
+                    <param id="0" name="Variable">targetX</param>
+                    <param id="1" name="Value">650</param>
+                </action>
+                <action id="-9" name="Set value" sid="2396380190713855" type="System">
+                    <param id="0" name="Variable">targetY</param>
+                    <param id="1" name="Value">900</param>
+                </action>
+                <action id="4" name="Set animation" sid="2939272142832124" type="Player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="2412358561630588" type="System">
+                    <param id="0" name="Variable">a</param>
+                    <param id="1" name="Value">angle(Player.X, Player.Y, targetX,  targetY)</param>
+                </action>
+                <action id="0" name="Set text" sid="1517315254659762" type="Dialog">
+                    <param id="0" name="Text">&quot;Blind Guy:&quot; &amp; newline &amp; &quot;Can you tell me the way to the chinese restaurant?&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3978749144235736" type="Answer_bg">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4419830770792192" type="Dialog_BG">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="5902239307655021" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9155261623093845" type="Answers">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8010457608728994" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="4" name="Set animation" sid="9359061823451189" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7141448324585816">
+            <conditions>
+                <condition id="3" name="On touched object" sid="134164182465595" type="Touch">
+                    <param id="0" name="Object">AnswerA</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="2567178428458971" type="AnswerA" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9172557508082361" type="Answers">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5655466411441007" type="Answer_bg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="383559935944166" type="Dialog">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="2760278931058785" type="Player">
+                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="804790792611418" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1177616039889249" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="1947701158052883" type="Dialog">
+                    <param id="0" name="Text">&quot;Blind Guy:&quot; &amp; newline &amp; &quot;Thanks Bro!&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="6728725321789078" type="System">
+                    <param id="0" name="Variable">BlindGuyPosition</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="1943026794766539" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6759799649972792" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1224511651484568" type="Dialog_BG">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="7834255318421858" type="Dialog">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="5663850458382222" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6522513615042857" type="System">
+                    <param id="0" name="Variable">blindGuyAngle</param>
+                    <param id="1" name="Value">angle(BlindGuy.X, BlindGuy.Y, 500,  950)</param>
+                </action>
+                <action id="-16" name="Wait" sid="9873040979474769" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="-9" name="Set value" sid="6508347032910957" type="System">
+                    <param id="0" name="Variable">blindGuyAngle</param>
+                    <param id="1" name="Value">angle(BlindGuy.X, BlindGuy.Y, 2100,  1000)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2379209119834612">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8250347955591381" type="Touch">
+                    <param id="0" name="Object">AnswerB</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="7989109932597638" type="AnswerA" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="228713835134951" type="Answers">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5221262781639283" type="Answer_bg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="9647243008804289" type="Dialog">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="8199470078872042" type="Player">
+                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8890749305546128" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="2597340992258562" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="5543371050081027" type="Dialog">
+                    <param id="0" name="Text">&quot;Blind Guy:&quot; &amp; newline &amp; &quot;Thanks Bro!&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="7212799360842144" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="116744448908964" type="System">
+                    <param id="0" name="Variable">BlindGuyPosition</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="2390959301788348" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="9955924953729411" type="Dialog">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3098715835925292" type="Dialog_BG">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="8289959430474879" type="BlindGuy">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="9615664438236181" type="System">
+                    <param id="0" name="Variable">blindGuyAngle</param>
+                    <param id="1" name="Value">angle(BlindGuy.X, BlindGuy.Y, 500,  950)</param>
+                </action>
+                <action id="-16" name="Wait" sid="8912624252603203" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="-24" name="Move to top" sid="3198650846222713" type="BlindGuy" />
+                <action id="7" name="Set mirrored" sid="8753196470737462" type="BlindGuy">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="2694303911313844" type="System">
+                    <param id="0" name="Variable">blindGuyAngle</param>
+                    <param id="1" name="Value">angle(BlindGuy.X, BlindGuy.Y, -300,  1100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7941276216116267">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1486439739620648" type="Touch">
+                    <param id="0" name="Object">AnswerC</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="1993031442933845" type="AnswerA" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1808005085516694" type="Dialog_BG">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9226246175912582" type="Answer_bg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4367429947297528" type="Answers">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="2544830902945533" type="Dialog">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="3758428204885021" type="Player">
+                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2068723162381519" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="2587511075367885" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="112433683458783">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4298996973395616" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9961661543672336">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6328402693804483" type="System">
+                            <param id="0" name="Variable">BlindGuyPosition</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4408444766668595" type="BlindGuy">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="1022751816731725" title="TalkingGuy">
+            <sub-events>
+                <event-block sid="1107901446604685">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="7158324031130174" type="Mouse">
+                            <param id="0" name="Object">TalkingGuy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5451939085231555" type="Hint">
+                            <param id="0" name="Text">&quot;Pudi&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8407618465353537">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="2135869646166142" type="Inventory" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2624003070318102" type="Hint">
+                                    <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with Pudi&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8777752202302522">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="994065096659256" type="Touch">
+                            <param id="0" name="Object">TalkingGuy</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="2842489216259322" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5049402338785243" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">91</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3043522358807507" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2628741822419806" type="Dialog">
+                            <param id="0" name="Text">&quot;Mayn Tschar:&quot; &amp; newline &amp; &quot;Do you want to come to my party tonight?&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5323551306203533" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="712334009579161" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6924574082131355" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9888337990916879">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1674108404002522" type="System">
+                                    <param id="0" name="Variable">HappyTalker</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="875589073899408" type="Function">
+                                    <param id="0" name="Name">&quot;listen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8440085657007777">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3065799481977657" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6842656637496536" type="Dialog">
+                                    <param id="0" name="Text">&quot;I would love to! See you then!&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5604417233860932" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;HappyTalk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1868972181357494" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1878994020661906" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;HappyIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6247137177529675" type="Dialog">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6214223261291907" type="Dialog_BG">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5835107645994387">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1181859795614557" type="Touch">
+                            <param id="0" name="Object">AnswerPositive</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="3353608258303105" type="AnswerPositive" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5108779826728967" type="Function">
+                            <param id="0" name="Name">&quot;listen&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4239739349818814" type="AnswerNegative">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="131783008449018" type="AnswerPositive">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6401226318757475" type="bg_talky_guy">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5718947438082852">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2651063563580898" type="Touch">
+                            <param id="0" name="Object">AnswerNegative</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="781588853331974" type="AnswerNegative" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4932561273922543" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7684210377822774" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5951155315425267" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446252306925678" type="System">
+                            <param id="0" name="Variable">listened</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3189729622676043" type="AnswerNegative">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8275182767665604" type="AnswerPositive">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3682108349949793" type="Dialog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6110285510866235" type="Dialog_BG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6312133546189793" type="bg_talky_guy">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6968833034017458">
+                    <conditions>
+                        <condition id="0" name="On function" sid="32722220581966" type="Function">
+                            <param id="0" name="Name">&quot;listen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7331165008751875">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6879837144172178" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2619547460294692" type="Dialog">
+                                    <param id="0" name="Text">&quot;Pudi:&quot; &amp; newline &amp; &quot;Hello... what a day... I woke up today on the wrong leg. &quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="993882991540582" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="331540026609328" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6655471281345817" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5755251697867374" type="AnswerNegative">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2173093489249678" type="AnswerPositive">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2719322527815569" type="bg_talky_guy">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="9597944668112621" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5972361441767844">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8481819121918627" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5670437256114579" type="Dialog">
+                                    <param id="0" name="Text">&quot;Pudi:&quot; &amp; newline &amp; &quot;My right leg is my good leg but when I get up on the left I know that the next 320 hours will not be enjoyable. &quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4024938278807065" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3831220069254663" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="5783565872005979" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6810348125992624" type="AnswerNegative">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5805303733161877" type="AnswerPositive">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8862366779829918" type="bg_talky_guy">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="1978911623721819" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1821119602579925">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8299683394293345" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1264289001636451" type="Dialog">
+                                    <param id="0" name="Text">&quot;Pudi:&quot; &amp; newline &amp; &quot;It is a curse! It already started with the window. It was open! I always close it before going to bed but somebody must have broken in and opened my window!&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3905586809200815" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2059362443499035" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9856205929099483" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4627055434926342" type="AnswerNegative">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2894740866442351" type="AnswerPositive">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3422624566741644" type="bg_talky_guy">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="344692723827574" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="866078282439902">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="509745489783792" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2321265713951143" type="Dialog">
+                                    <param id="0" name="Text">&quot;Pudi:&quot; &amp; newline &amp; &quot;I bet it was Hannibal. I lost to him in Poker yesterday but I could not pay him. With what should I pay him? I need my money for my holiday trip. &quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7085307677301034" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1939746037748728" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6852129461711448" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7644206871283094" type="AnswerNegative">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2435752563675524" type="AnswerPositive">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3144420405539632" type="bg_talky_guy">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="7574879285904424" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9369230300600938">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5116106481455185" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6834293678971101" type="Dialog">
+                                    <param id="0" name="Text">&quot;Pudi:&quot; &amp; newline &amp; &quot;And what now? Here I stand and am not even the main character of this game. I am cuter than you and I have 12 Friends on allmyfriendsbook, which is more than you do.&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6552711482285083" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Talk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7171554565785135" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2584974764987512" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7278587065594031" type="AnswerNegative">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2998177121895928" type="AnswerPositive">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1783745447621914" type="bg_talky_guy">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4496220864001352" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2866961179581381">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2293296010331998" type="System">
+                                    <param id="0" name="Variable">listened</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="1280012034472628" type="AnswerNegative">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1790217426904415" type="AnswerPositive">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8927769974465953" type="bg_talky_guy">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6831947160411567" type="Dialog">
+                                    <param id="0" name="Text">&quot;Pudi:&quot; &amp; newline &amp; &quot;Thank you that you listened to my problems! Now I feel much better&quot; &amp; newline &amp; &quot;I would love to come to your party! See you later!&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7929684687414139" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;HappyTalk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7409936499877271" type="System">
+                                    <param id="0" name="Seconds">10</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9965724574262068" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;HappyIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="15577431528937" type="Dialog">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6435215052368417" type="Dialog_BG">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4362934108335802" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6064998388636884" type="System">
+                                    <param id="0" name="Object to create">msg_going</param>
+                                    <param id="1" name="Layer">&quot;HandyOverlay&quot;</param>
+                                    <param id="2" name="X">Smartphone.X + 5</param>
+                                    <param id="3" name="Y">Smartphone.Y -50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9667292473162215" type="msg_going">
+                                    <param id="0" name="Instance variable">Order</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="5562044556946895" type="msg_going">
+                                    <param id="0" name="Frame number">HappyPeople</param>
+                                </action>
+                                <action behavior="Pin2" id="0" name="Pin to object" sid="4901887867024908" type="msg_going">
+                                    <param id="0" name="Pin to">Smartphone</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4023386936117251" type="System">
+                                    <param id="0" name="Variable">HappyPeople</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6671487900271618" type="Function">
+                                    <param id="0" name="Name">&quot;reorder&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9465518111867311" type="System">
+                                    <param id="0" name="Variable">HappyTalker</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="6042734795284502" type="Audio">
+                                    <param id="0" name="Audio file">notification</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1601393053968372">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="236146382815509" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2240891542102798">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5653865643496327" type="System">
+                                    <param id="0" name="Variable">HappyTalker</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9107490496480352" type="TalkingGuy">
+                                    <param id="0" name="Animation">&quot;HappyIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6138160462753341">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8628954704345333" type="System">
+                    <param id="0" name="Variable">blindGuyAngle</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="2815943075481496" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="7577499009828941" type="BlindGuy">
+                    <param id="0" name="X">Self.X + cos(blindGuyAngle) * speed * dt</param>
+                    <param id="1" name="Y">Self.Y + sin(blindGuyAngle) * speed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="listened" sid="982271123766792" static="0" type="number">0</variable>
+        <event-group description="" sid="4245402673455253" title="Girl">
+            <sub-events>
+                <event-block sid="5516805830923565">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="551778545785381" type="Touch">
+                            <param id="0" name="Object">girl</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="8436632722482333" type="Touch">
+                            <param id="0" name="Object">Vuvuzela</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="6544911592444834" type="girl" />
+                        <condition id="0" name="Compare text" sid="8942131519123777" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3314124860896582" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">89</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1617486144789715" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8932600109812235" type="Dialog">
+                            <param id="0" name="Text">&quot;Mayn Tschar:&quot; &amp; newline &amp; &quot;Do you want to come to my party tonight?&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1845906514344861" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3446270775898375" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2584980516597029" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4714759380212826" type="Dialog">
+                            <param id="0" name="Text">&quot;Vuvuzela Girl:&quot; &amp; newline &amp; &quot;I am so exhausted. My mom told me I have to play my vuvuzela to earn some food...&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1814035754240345" type="girl">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2211511044007132" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7726567081128621" type="girl">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8312920298619638" type="Dialog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1709864670636258" type="Dialog_BG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4000022041009299">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="6526482439311692" type="Mouse">
+                            <param id="0" name="Object">girl</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="339758210696029" type="girl" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="450040345499376" type="Hint">
+                            <param id="0" name="Text">&quot;Girl&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9653062561974244">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="1755349745195722" type="Inventory" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2965551141284916" type="Hint">
+                                    <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with Girl&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7607919157620888">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="8480438448805168" type="Mouse">
+                            <param id="0" name="Object">Vuvuzela</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="6907811305601399" type="Vuvuzela" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="111747543462999" type="Hint">
+                            <param id="0" name="Text">&quot;Vuvuzela&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="772747190736538">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="5244109612344875" type="Inventory" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="753061989230297" type="Hint">
+                                    <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with vuvuzela&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1457120686932095">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3257145360343766" type="Touch">
+                            <param id="0" name="Object">Vuvuzela</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="5909099454289202" type="Vuvuzela" />
+                        <condition id="0" name="Compare text" sid="3771464205475197" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9559374164697989" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1265783704319032" type="Dialog">
+                            <param id="0" name="Text">&quot;Mayn Tschar:&quot; &amp; newline &amp; &quot;The girl forgot her vuvuzela...&quot; &amp; newline &amp; &quot;I think I will take it. Maye I can also learn how to use it...&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1713623261479029" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3491517195225567" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8194162000030764" type="Player">
+                            <param id="0" name="Animation">&quot;Take&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1888265930482641" type="System">
+                            <param id="0" name="Variable">ItemVuvuzela</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4995659560140202" type="Function">
+                            <param id="0" name="Name">&quot;getVuvuzela&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="6059191693426994" type="Dialog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8173926855177902" type="Dialog_BG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8645216602666777" type="Vuvuzela">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2740936402406485">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="9519258243874278" type="System">
+                            <param id="0" name="Interval (seconds)">random(7,12)</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="2324568322165344" type="girl">
+                            <param id="0" name="Animation">&quot;Blow&quot;</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="6019855862656066" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="633860655443181" type="girl" />
+                        <condition id="2" inverted="1" name="Is playing" sid="6277476660973708" type="girl">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="7279834507914577" type="girl">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6612885719674063" type="girl">
+                            <param id="0" name="Animation">&quot;Blow&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7832186419156363">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="8849810030253042" type="girl">
+                            <param id="0" name="Animation">&quot;Blow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4427812706015981" type="girl">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2352655891032785">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="8617544287126558" type="girl">
+                            <param id="0" name="Animation">&quot;Blow&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="1523678574549725" type="girl">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="1953980109516233" type="middle">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="4774390046938826" type="Audio">
+                            <param id="0" name="Audio file">vuvuzela</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8624003791549655">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9192238176672879" type="System" />
+                        <condition id="-14" name="Compare variable" sid="1749172155977689" type="System">
+                            <param id="0" name="Variable">GirlAway</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1721004780232825" type="girl">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2682990330448339">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4740045663551128" type="System">
+                                    <param id="0" name="Variable">ItemVuvuzela</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="581353993086689" type="Vuvuzela">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4478260203957617" title="Interactive">
+            <sub-events>
+                <event-block sid="432561527573527">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="4517371846854306" type="Mouse">
+                            <param id="0" name="Object">FishStore</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="8682501970322215" type="Mouse">
+                            <param id="0" name="Object">girl</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3792905088778524" type="Hint">
+                            <param id="0" name="Text">&quot;Fishstore&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6385551182782767">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="9655990467310565" type="Inventory" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="19695041705833" type="Hint">
+                                    <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with fish store&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9535287783577446">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7406034767884187" type="Touch">
+                            <param id="0" name="Object">FishStore</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="1578125729679655" type="Mouse">
+                            <param id="0" name="Object">girl</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="5737780643791557" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6625838051885119" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7045766134573184" type="Dialog">
+                            <param id="0" name="Text">&quot;Mayn Tschar:&quot; &amp; newline &amp; &quot;They have the best fish in town. Unfortunately closed...&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5380024691854291" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3151428370974147" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">89</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5326793206431906" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2317529288632716" type="Dialog_BG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7151383506406695" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2912410843720933" type="Dialog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9857402945001374">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="3951265167949071" type="Mouse">
+                            <param id="0" name="Object">brunnen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3455383611622652" type="Hint">
+                            <param id="0" name="Text">&quot;Well&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1167725274878251">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="8856894176644372" type="Inventory" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3257780734755145" type="Hint">
+                                    <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with well&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7948332750758363">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8277121947153194" type="Touch">
+                            <param id="0" name="Object">brunnen</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="6658999067886245" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7670851885905961" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8809589026087364" type="Dialog">
+                            <param id="0" name="Text">&quot;Mayn Tschar:&quot; &amp; newline &amp; &quot;I wonder what this smell could be...&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="11169808031831" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9690114052499472" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">89</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1424312189421276" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3188943688635064" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5886072756260004" type="Dialog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1596948712689081" type="Dialog_BG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2645369215786143">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="2841328006687535" type="Mouse">
+                            <param id="0" name="Object">market</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="524913347896872" type="Hint">
+                            <param id="0" name="Text">&quot;Market stands&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5618666937949895">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="5823139549491956" type="Inventory" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6997836703215812" type="Hint">
+                                    <param id="0" name="Text">&quot;Use &quot; &amp; Inventory.ItemName &amp; &quot; with market stands&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6047775439007016">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8153947350362722" type="Touch">
+                            <param id="0" name="Object">market</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="7069320087799839" type="Dialog">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8730580803115308" type="Dialog_BG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7472306100406375" type="Dialog">
+                            <param id="0" name="Text">&quot;Mayn Tschar:&quot; &amp; newline &amp; &quot;Today is farmers market. Im glad the streets are not that full yet...&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5248177653816625" type="Player">
+                            <param id="0" name="Animation">&quot;Talk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2514315887196358" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">91</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5528534946088358" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9860129281208566" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3235246249946897" type="Dialog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3655437138130837" type="Dialog_BG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="4005444406017387">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2024409985955" type="System">
+                    <param id="0" name="Variable">MovingOut</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="657495885695897" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9454590791784644" type="girl">
+                    <param id="0" name="X">int(lerp(Self.X, Self.X+300,0.01))</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

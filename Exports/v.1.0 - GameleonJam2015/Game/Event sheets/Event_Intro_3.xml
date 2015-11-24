@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_Intro_3</name>
+    <events>
+        <event-block sid="5797121826842975">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7179540417830083" type="System" />
+            </conditions>
+            <actions>
+                <action id="-19" name="Rotate counter-clockwise" sid="2239499332187975" type="strudel">
+                    <param id="0" name="Degrees">4</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="1915759351688531" type="intro_mainchar_frightened">
+                    <param id="0" name="Degrees">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7515342019731656">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4825271945469174" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="2691396057282336" type="Audio">
+                    <param id="0" name="Tag">&quot;tipping&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="5500883785074981" type="Audio">
+                    <param id="0" name="Audio file">music_panic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="5391692102908214" type="Dialog">
+                    <param id="0" name="Text">&quot;Oh no... Nobody wants to come to my party. I have no friends even on AllMyFriendsBook... &quot; &amp; newline &amp; &quot;Time to make new friends in the real world!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="2816795735486881" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="9260034622741309" type="System">
+                    <param id="0" name="Seconds">9</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7447700547618663" type="System">
+                    <param id="0" name="Layout">Layout_City</param>
+                </action>
+                <action id="33" name="Stop all" sid="6796448506177256" type="Audio" />
+                <action id="0" name="Play" sid="2048627991136294" type="Audio">
+                    <param id="0" name="Audio file">music_game</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
